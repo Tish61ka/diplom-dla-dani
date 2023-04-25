@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +9,12 @@
   font-family: "Montserrat", sans-serif;
   z-index: 2;
 }
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 :root {
   --main-bg-color: white;
   --second-bg-color: #ffd200;
@@ -19,21 +22,26 @@ html {
   --second-txt-color: white;
   --main-button-color: #ffc400;
 }
+
 body {
   width: 100vw;
   background-color: var(--main-bg-color);
   overflow-x: hidden;
 }
+
 body::-webkit-scrollbar {
   width: 1vw;
 }
+
 body::-webkit-scrollbar-track {
   background: var(--second-bg-color);
 }
+
 body::-webkit-scrollbar-thumb {
   background-color: var(--main-bg-color);
   border: 1px solid black;
 }
+
 .container {
   max-width: 1560px;
   width: 100%;
@@ -45,7 +53,8 @@ body::-webkit-scrollbar-thumb {
 header {
   margin: 16px 183px;
 }
-header > img:first-child {
+
+header>img:first-child {
   position: absolute;
   padding-top: 110px;
   right: 0;
@@ -53,6 +62,7 @@ header > img:first-child {
   top: 0;
   z-index: 1;
 }
+
 header nav {
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgb(0, 0, 0, .2);
@@ -67,6 +77,7 @@ header nav {
   top: 0;
   transition: 400ms;
 }
+
 header nav ul {
   display: flex;
   flex-direction: row;
@@ -75,10 +86,12 @@ header nav ul {
   width: 1554px;
   z-index: 1000;
 }
+
 header nav ul a li p {
   font-size: 18px;
   color: black;
 }
+
 header nav ul a li button {
   width: 200px;
   height: 45px;
@@ -94,17 +107,46 @@ header nav ul a li button {
 
 /* Close section header */
 
+/* Modal  */
+.modal-icon {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  /* filter: blur(3.5px); */
+}
+
+.modal-icon.removed {
+  display: none;
+}
+
+.modal-form {
+  width: 736px;
+  height: 505px;
+  background-color: white;
+}
+
 /* Open section under-header */
 
 .under-header {
-  margin-bottom: 300px;
+  margin-bottom: 400px;
 }
 
 .under-header div div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  margin-top: 330px;
+  margin-top: 230px;
   margin-left: 120px;
 }
+
 .under-header div div:first-child h1 {
   padding-top: 90px;
   text-align: center;
@@ -115,10 +157,10 @@ header nav ul a li button {
   color: #ffffff;
   margin-bottom: 23px;
 }
+
 .under-header div div:first-child p {
   margin-top: 40px;
   text-align: center;
-  padding-left: 240px;
   width: 1200px;
   font-style: normal;
   font-weight: 500;
@@ -127,6 +169,7 @@ header nav ul a li button {
   color: rgb(255, 255, 255);
   margin-bottom: 40px;
 }
+
 .under-header div div:first-child button {
   width: 400px;
   height: 65px;
@@ -139,8 +182,9 @@ header nav ul a li button {
   font-size: 18px;
   line-height: 24px;
   color: black;
-  margin-left: 500px;
+  cursor: pointer;
 }
+
 /* Close section under-header */
 
 /* Open section reviews */
@@ -160,6 +204,7 @@ header nav ul a li button {
   height: 649px;
   margin-top: 0px;
 }
+
 .section-div div {
   position: relative;
   display: flex;
@@ -174,6 +219,7 @@ header nav ul a li button {
   border-radius: 27px;
   top: -80px;
 }
+
 .section-div div p:first-child {
   width: 282px;
   font-style: normal;
@@ -183,11 +229,13 @@ header nav ul a li button {
   text-align: center;
   margin-bottom: 60px;
 }
+
 .section-div div img {
   width: 160px;
   height: 160px;
   margin-bottom: 20px;
 }
+
 .section-div div h2 {
   width: 165px;
   font-style: normal;
@@ -197,6 +245,7 @@ header nav ul a li button {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .section-div div p:last-child {
   width: 219px;
   font-style: normal;
@@ -233,7 +282,8 @@ header nav ul a li button {
   line-height: 59px;
   margin-bottom: 30px;
 }
-.bottom-div-tarif > div:first-child p {
+
+.bottom-div-tarif>div:first-child p {
   width: 580px;
   font-style: normal;
   font-weight: 700;
@@ -242,6 +292,7 @@ header nav ul a li button {
   color: white;
   margin-bottom: 40px;
 }
+
 .bottom-div-tarif form label {
   font-style: normal;
   font-weight: 700;
@@ -249,6 +300,7 @@ header nav ul a li button {
   color: white;
   line-height: 23px;
 }
+
 input[type="placeholder"] {
   font-family: "Roboto";
   font-style: normal;
@@ -257,14 +309,17 @@ input[type="placeholder"] {
   line-height: 23px;
   color: #b7b7b7;
 }
+
 .input {
   display: flex;
   flex-direction: column;
 }
+
 .input label {
   margin-left: 35px;
   margin-bottom: 25px;
 }
+
 .bottom-div-tarif form input[type="text"] {
   width: 628px;
   height: 60px;
@@ -275,15 +330,18 @@ input[type="placeholder"] {
   outline: none;
   margin-bottom: 25px;
 }
+
 .check {
   display: flex;
   flex-direction: row;
 }
+
 .check div {
   display: flex;
   flex-direction: row;
   width: 358px;
 }
+
 .check p {
   font-family: "Roboto";
   font-style: normal;
@@ -292,10 +350,12 @@ input[type="placeholder"] {
   line-height: 18px;
   margin-left: 20px;
 }
+
 input[type="checkbox"] {
   width: 30px;
   height: 30px;
 }
+
 .bottom-div-tarif button {
   width: 219px;
   height: 59px;
@@ -308,9 +368,11 @@ input[type="checkbox"] {
   line-height: 18px;
   margin-left: 49px;
 }
+
 .bottom-div-tarif button:hover {
   cursor: pointer;
 }
+
 .bottom-div-tarif img {
   margin-top: -713px;
   margin-left: 800px;
@@ -321,27 +383,31 @@ input[type="checkbox"] {
 
 /* Open section footer */
 
-footer > div{
+footer>div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-footer h1{
+
+footer h1 {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
 }
-.first-footer-div{
+
+.first-footer-div {
   display: flex;
   flex-direction: column;
 }
-.logo-footer{
+
+.logo-footer {
   width: 140px;
   height: 75px;
   margin-bottom: 20px;
 }
-.first-footer-p{
+
+.first-footer-p {
   width: 233px;
   font-style: normal;
   font-weight: 500;
@@ -349,15 +415,18 @@ footer h1{
   margin-bottom: 40px;
   margin-left: 10px;
 }
-.social a img{
+
+.social a img {
   width: 40px;
   margin-left: 5px;
 }
-.first-footer-div:nth-child(2) h1{
+
+.first-footer-div:nth-child(2) h1 {
   margin-top: 40px;
   margin-bottom: 15px;
 }
-.first-footer-div:nth-child(2) > p:last-child{
+
+.first-footer-div:nth-child(2)>p:last-child {
   margin-top: 10px;
   margin-left: 33px;
   font-style: normal;
@@ -365,55 +434,66 @@ footer h1{
   font-size: 14px;
   line-height: 17px;
 }
-.first-footer-div:nth-child(2) div{
+
+.first-footer-div:nth-child(2) div {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 15px;
 }
-.first-footer-div:nth-child(2) div:nth-child(2) img:first-child{
+
+.first-footer-div:nth-child(2) div:nth-child(2) img:first-child {
   width: 12px;
   margin-right: 14px;
   margin-left: 6px;
 }
-.first-footer-div:nth-child(2) div:nth-child(3) img:first-child{
+
+.first-footer-div:nth-child(2) div:nth-child(3) img:first-child {
   width: 24px;
   margin-right: 11px;
 }
-.first-footer-div:nth-child(2) div:nth-child(4) img:first-child{
+
+.first-footer-div:nth-child(2) div:nth-child(4) img:first-child {
   width: 18px;
   margin-right: 15px;
 }
-.first-footer-div:nth-child(2) div p{
+
+.first-footer-div:nth-child(2) div p {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   text-align: left;
 }
-.first-footer-div:nth-child(3) h1{
+
+.first-footer-div:nth-child(3) h1 {
   margin-top: 40px;
   margin-bottom: 30px;
 }
-.first-footer-div:nth-child(3) ul li{
+
+.first-footer-div:nth-child(3) ul li {
   margin-bottom: 15px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
 }
-.first-footer-div:nth-child(4) h1{
+
+.first-footer-div:nth-child(4) h1 {
   margin-top: 40px;
   margin-bottom: 30px;
 }
-.first-footer-div:nth-child(4) p:nth-child(2), .first-footer-div:nth-child(4) p:nth-child(3){
+
+.first-footer-div:nth-child(4) p:nth-child(2),
+.first-footer-div:nth-child(4) p:nth-child(3) {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 15px;
 }
-.first-footer-div:nth-child(4) form{
+
+.first-footer-div:nth-child(4) form {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -423,7 +503,8 @@ footer h1{
   height: 50px;
   margin-bottom: 15px;
 }
-.first-footer-div:nth-child(4) form input{
+
+.first-footer-div:nth-child(4) form input {
   background: transparent;
   outline: none;
   height: 100%;
@@ -431,7 +512,8 @@ footer h1{
   border: none;
   padding-left: 20px;
 }
-.first-footer-div:nth-child(4) form button{
+
+.first-footer-div:nth-child(4) form button {
   width: 40px;
   height: 40px;
   border: none;
@@ -439,27 +521,31 @@ footer h1{
   border-radius: 3px;
   margin-right: 5px;
 }
-.first-footer-div:nth-child(4) p:nth-child(4){
+
+.first-footer-div:nth-child(4) p:nth-child(4) {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
 }
-footer hr{
+
+footer hr {
   width: 1560px;
   margin: 50px auto;
 }
-.footer-bot{
+
+.footer-bot {
   margin-top: -10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 30px;
 }
-.footer-bot div{
+
+.footer-bot div {
   display: flex;
   flex-direction: row;
-  gap: 9px; 
+  gap: 9px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
